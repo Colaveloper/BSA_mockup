@@ -1,0 +1,42 @@
+@keyframes appear {
+  0% {
+    transform: translateY(20px);
+    stroke-width: 5px;
+  }
+  100% {
+    transform: translateY(0);
+    stroke-width: 3px;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    transform: translateY(0px);
+    stroke-width: 3px;
+  }
+  20% {
+    transform: translateY(100px);
+    stroke-width: 0px;
+  }
+  100% {
+    transform: translateY(100px);
+    stroke-width: 0px;
+  }
+}
+
+
+svg {
+  padding: 200px 400px 2000px;
+  animation: disappear 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  overflow: visible;
+}
+
+.cls-1 {
+  animation: 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 appear;
+  fill: none;
+  stroke: #1d1d1b;
+  stroke-linecap: square;
+}
+
